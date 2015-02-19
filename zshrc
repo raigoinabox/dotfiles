@@ -15,4 +15,7 @@ setopt HIST_IGNORE_DUPS
 bindkey -e
 # TMUX
 [[ $- != *i* ]] && return
-[[ -z "$TMUX" ]] && exec tmux
+if [[ -z "$TMUX" ]]
+then
+	exec tmux
+fi
