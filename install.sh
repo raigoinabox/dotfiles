@@ -2,10 +2,17 @@
 
 set -eu
 
-ln -s "${HOME}/dotfiles/bashrc" "${HOME}/.bashrc"
+dir=~/dotfiles
+olddir=~/dotfiles_old
+files="bashrc vimrc zshrc"
 
-if [[ ! -d "${HOME}/.vim" ]]
-then
-	mkdir "${HOME}/.vim"
-fi
+mkdir -p $olddir
+mkdir -p "${HOME}/.vim"
+
+for file in $files
+do
+	mv ~/.$file $olddir
+	ln -s $dir/$file ~/.$file
+done
+
 sudo pacman -S --needed source-highlight

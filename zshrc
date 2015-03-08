@@ -11,6 +11,7 @@ compinit
 # End of lines added by compinstall
 
 # Raigo
+eval $(tset -s xterm-256color)
 setopt HIST_IGNORE_DUPS
 bindkey -e
 # TMUX
