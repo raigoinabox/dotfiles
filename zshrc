@@ -11,7 +11,10 @@ compinit
 # End of lines added by compinstall
 
 # Raigo
-eval $(tset -s xterm-256color)
+if [ "$TERM" == "xterm" ]
+then
+	eval $(tset -s xterm-256color)
+fi
 setopt HIST_IGNORE_DUPS
 bindkey -e
 # TMUX
