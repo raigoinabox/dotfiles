@@ -15,4 +15,4 @@ do
 	ln -s $dir/$file ~/.$file
 done
 
-sudo pacman -S --needed source-highlight
+sudo pacman -S --needed source-highlight vim-jellybeans
