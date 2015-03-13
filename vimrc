@@ -157,12 +157,13 @@ if has('langmap') && exists('+langnoremap')
 endif
 
 " Raigo options
+set background=dark
+colorscheme solarized
 let g:haddock_browser = "/usr/bin/firefox"
+let g:syntastic_mode_map = { "mode": "active", "active_filetypes": [], "passive_filetypes": ["python"] }
 set ignorecase
 set smartcase
 set backupdir=./.backupdir,~/.vim/backupdir,.,/tmp
 set undodir=./.undodir,~/.vim/undodir,.,/tmp
-colorscheme jellybeans
 set number
-let g:syntastic_mode_map = { "mode": "active", "active_filetypes": [], "passive_filetypes": ["python"] }
 
