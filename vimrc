@@ -165,3 +165,4 @@ set smartcase
 set backupdir=./.backupdir,~/.vim/backupdir,.,/tmp
 set undodir=./.undodir,~/.vim/undodir,.,/tmp
 set number
+set breakindent
