@@ -4,10 +4,9 @@ set -eu
 
 dir=~/dotfiles
 olddir=~/dotfiles_old
-files="bashrc vimrc zshrc"
+files="bashrc vimrc vim zshrc"
 
 mkdir -p $olddir
-mkdir -p "${HOME}/.vim"
 
 for file in $files
 do
