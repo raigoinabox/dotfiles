@@ -1,3 +1,3 @@
 export LESSOPEN="| source-highlight-esc.sh %s"
-export LESS=' -R '
+export LESS=' -Rj4 '
 export EDITOR="vim"
