@@ -14,4 +14,6 @@ do
 	ln -s $dir/$file ~/.$file
 done
 
+mkdir -p "${HOME}/.vim/backupdir"  "${HOME}/.vim/undodir"
+
 sudo pacman -S --needed source-highlight vim-jellybeans vim-taglist
