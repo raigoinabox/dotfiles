@@ -109,6 +109,7 @@ let g:haddock_browser = "/usr/bin/firefox"
 let g:syntastic_mode_map = { "mode": "active", "active_filetypes": [], "passive_filetypes": ["python"] }
 set breakindent
 set showbreak=>\ 
+let g:ycm_collect_identifiers_from_tags_files = 1
 set ignorecase
 set smartcase
 set backupdir=./.backupdir,~/.vim/backupdir,.,/tmp
