@@ -1,2 +1,2 @@
 
-set autoindent
+setlocal autoindent
