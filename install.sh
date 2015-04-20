@@ -4,7 +4,7 @@ set -eu
 
 dir=~/dotfiles
 olddir=~/dotfiles_old
-files="bashrc vimrc vim zshrc"
+files="bashrc vim zshrc"
 
 mkdir -p $olddir
 
@@ -16,4 +16,4 @@ done
 
 mkdir -p "${HOME}/.vim/backupdir"  "${HOME}/.vim/undodir"
 
-sudo pacman -S --needed source-highlight vim-jellybeans vim-taglist
+sudo pacman -S --needed source-highlight vim-taglist

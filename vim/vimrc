@@ -123,3 +123,6 @@ vmap <Leader>y "+y
 vmap <Leader>d "+d
 vmap <Leader>p "+p
 vmap <Leader>P "+P
+
+set exrc
+set secure
