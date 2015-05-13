@@ -107,18 +107,20 @@ endif
 colorscheme jellybeans
 let g:haddock_browser = "/usr/bin/firefox"
 let g:syntastic_mode_map = { "mode": "active", "active_filetypes": [], "passive_filetypes": ["python"] }
+let g:ycm_collect_identifiers_from_tags_files = 1
+
 set breakindent
 set showbreak=>\ 
-let g:ycm_collect_identifiers_from_tags_files = 1
 set ignorecase
 set smartcase
 set backupdir=./.backupdir,~/.vim/backupdir,.,/tmp
 set undodir=./.undodir,~/.vim/undodir,.,/tmp
 set number
 
+nmap <buffer> <Leader>m :make<CR>
+
 nmap <Leader>p "+p
 nmap <Leader>P "+P
-nmap <Leader>r :make! run<CR>
 
 vmap <Leader>y "+y
 vmap <Leader>d "+d
