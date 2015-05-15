@@ -104,11 +104,11 @@ if has('langmap') && exists('+langnoremap')
 endif
 
 " Raigo options
-colorscheme jellybeans
 let g:haddock_browser = "/usr/bin/firefox"
 let g:syntastic_mode_map = { "mode": "active", "active_filetypes": [], "passive_filetypes": ["python"] }
 let g:ycm_collect_identifiers_from_tags_files = 1
 
+set autowrite
 set breakindent
 set showbreak=>\ 
 set ignorecase
@@ -116,13 +116,13 @@ set smartcase
 set backupdir=./.backupdir,~/.vim/backupdir,.,/tmp
 set undodir=./.undodir,~/.vim/undodir,.,/tmp
 set number
+set relativenumber
 
-nmap <buffer> <Leader>m :make<CR>
+map <Leader>p "+p
+map <Leader>P "+P
 
-nmap <Leader>p "+p
-nmap <Leader>P "+P
+nmap <Leader>m :make<CR>
+nmap <Leader>r :make! run<CR>
 
 vmap <Leader>y "+y
 vmap <Leader>d "+d
-vmap <Leader>p "+p
-vmap <Leader>P "+P
