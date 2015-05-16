@@ -107,6 +107,7 @@ endif
 let g:haddock_browser = "/usr/bin/firefox"
 let g:syntastic_mode_map = { "mode": "active", "active_filetypes": [], "passive_filetypes": ["python"] }
 let g:ycm_collect_identifiers_from_tags_files = 1
+let mapleader = "\<Space>"
 
 set autowrite
 set breakindent
