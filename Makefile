@@ -1,4 +1,5 @@
 all: git
+	./install.sh
 
 .PHONY: all git
 
