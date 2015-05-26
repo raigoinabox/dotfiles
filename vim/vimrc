@@ -118,11 +118,13 @@ set backupdir=./.backupdir,~/.vim/backupdir,.,/tmp
 set undodir=./.undodir,~/.vim/undodir,.,/tmp
 set number
 set relativenumber
+set exrc
+set secure
 
 map <Leader>p "+p
 map <Leader>P "+P
 
-nmap <Leader>m :make<CR>
+nmap <Leader>c :make compile<CR>
 nmap <Leader>r :make! run<CR>
 
 vmap <Leader>y "+y
