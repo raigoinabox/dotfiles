@@ -1,11 +1,8 @@
-error:
-	@echo "Please choose one of the following target: install"
-	@exit 2
-
-.PHONY: error install git ackrc
-
 install : git ackrc
+	sudo pacman -S --needed cdargs
 	./install.sh
+
+.PHONY: install git ackrc
 
 git :
 	sudo pacman -S --needed git
