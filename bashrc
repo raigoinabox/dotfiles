@@ -9,11 +9,9 @@ alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
 # Raigo
-if [ "$TERM" == "xterm" ]
-then
-	eval $(tset -s xterm-256color)
-fi
-if [[ -z "$TMUX" ]]
+if [[ "$TERM" == "xterm-256color" &&  -z "$TMUX" ]]
 then
 	exec tmux
 fi
+
+source /usr/share/cdargs/cdargs-bash.sh

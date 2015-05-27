@@ -4,7 +4,7 @@ error:
 
 .PHONY: error install git ackrc
 
-install : git
+install : git ackrc
 	./install.sh
 
 git :
