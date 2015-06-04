@@ -1,5 +1,5 @@
 install : git ackrc
-	sudo pacman -S --needed cdargs
+	sudo pacman -S --needed autojump
 	./install.sh
 
 .PHONY: install git ackrc
@@ -9,4 +9,4 @@ git :
 	git config --global credential.helper cache
 
 ackrc :
-	ln -s ~/dotfiles/ackrc ~/.ackrc
+	cp ~/dotfiles/ackrc ~/.ackrc

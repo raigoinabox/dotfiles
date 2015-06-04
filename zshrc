@@ -15,8 +15,10 @@ if [ "$TERM" == "xterm" ]
 then
 	eval $(tset -s xterm-256color)
 fi
+
 setopt HIST_IGNORE_DUPS
 bindkey -e
+
 # TMUX
 [[ $- != *i* ]] && return
 if [[ -z "$TMUX" ]]
