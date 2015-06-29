@@ -15,5 +15,3 @@ do
 done
 
 mkdir -p "${HOME}/.vim/backupdir"  "${HOME}/.vim/undodir"
-
-sudo pacman -S --needed source-highlight vim-taglist
