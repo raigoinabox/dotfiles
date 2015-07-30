@@ -10,18 +10,7 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-# Raigo
-if [ "$TERM" == "xterm" ]
-then
-	eval $(tset -s xterm-256color)
-fi
-
 setopt HIST_IGNORE_DUPS
 bindkey -e
 
-# TMUX
-[[ $- != *i* ]] && return
-if [[ -z "$TMUX" ]]
-then
-	exec tmux
-fi
+source /usr/share/autojump/autojump.zsh
