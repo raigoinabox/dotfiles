@@ -8,8 +8,9 @@ git :
 	sudo pacman -S --needed git
 	git config --global user.name "Raigo Aljand"
 	git config --global user.email raljand@gmail.com
-	git config --global credential.helper cache
-	git config --global rerere.enabled true
+	git config --global credential.helper store
+	git config --global init.templatedir "%(pwd)/git-template"
+	git config --global alias.ctags '!.git/hooks/ctags'
 
 ackrc :
 	cp ~/dotfiles/ackrc ~/.ackrc
