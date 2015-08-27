@@ -9,4 +9,4 @@ alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
 # Raigo
-source /usr/share/cdargs/cdargs-bash.sh
+source /usr/share/autojump/autojump.bash
