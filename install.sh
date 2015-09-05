@@ -13,5 +13,3 @@ do
 	mv ~/.$file $olddir
 	ln -s $dir/$file ~/.$file
 done
-
-mkdir -p "${HOME}/.vim/backupdir"  "${HOME}/.vim/undodir"
