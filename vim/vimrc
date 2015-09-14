@@ -131,3 +131,7 @@ nmap <Leader>r :make! run<CR>
 
 vmap <Leader>y "+y
 vmap <Leader>d "+d
+
+if &diff
+	colo peaksea
+endif
