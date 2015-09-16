@@ -17,3 +17,6 @@ git :
 ackrc :
 	mv ~/.ackrc "$(pwd)/old/ackrc"
 	cp "$(pwd)/ackrc" ~/.ackrc
+
+mysql:
+	cp -b my.cnf ~/.my.cnf
