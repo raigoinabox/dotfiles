@@ -1,9 +1,11 @@
+# use rsync for vim directory instead of normal cp -rb.
+# web need to exclude the directories where i have the undo files and the backup/lock files and cp doesn't have exclude option.
+
 pwd := $(shell pwd)
 files := bashrc ackrc my.cnf profile zshrc zshenv tmux.conf
 
 install : git $(files)
 	sudo pacman -S --needed autojump source-highlight vim-taglist
-	$(cp) -r vim ~/.vim
 
 .PHONY: install git $(files)
 
