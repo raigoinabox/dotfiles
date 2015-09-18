@@ -1,4 +1,3 @@
-cp := cp -b
 pwd := $(shell pwd)
 files := bashrc ackrc my.cnf profile zshrc zshenv tmux.conf
 
