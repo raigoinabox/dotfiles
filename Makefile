@@ -1,10 +1,15 @@
+cp := cp -b
 pwd := $(shell pwd)
+files := bashrc ackrc my.cnf profile zshrc zshenv tmux.conf
 
-install : git ackrc
+install : git $(files)
 	sudo pacman -S --needed autojump source-highlight vim-taglist
-	./install.sh
+	$(cp) -r vim ~/.vim
 
-.PHONY: install git ackrc
+.PHONY: install git $(files)
+
+$(files) :
+	cp -b $@ ~/.$@
 
 git :
 	git config --global user.name "Raigo Aljand"
@@ -13,7 +18,3 @@ git :
 	git config --global init.templatedir "$(pwd)/git-template"
 	git config --global alias.ctags '!.git/hooks/ctags'
 	git config --global core.excludesfile "$(pwd)/gitignore"
-
-ackrc :
-	mv ~/.ackrc "$(pwd)/old/ackrc"
-	cp "$(pwd)/ackrc" ~/.ackrc
