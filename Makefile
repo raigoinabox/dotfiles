@@ -12,7 +12,7 @@ install : git $(files)
 
 $(files) :
 	cp -b $@ ~/.$@
-	[[ -e ~/.$@~ ]] && vimdiff ~/.$@ ~/.$@~
+	-[[ -e ~/.$@~ ]] && vimdiff ~/.$@ ~/.$@~ && rm ~/.$@~ 
 
 git :
 	git config --global user.name "Raigo Aljand"
