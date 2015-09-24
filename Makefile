@@ -11,8 +11,7 @@ install : git $(files)
 .PHONY: install git $(files)
 
 $(files) :
-	cp -b $@ ~/.$@
-	-[[ -e ~/.$@~ ]] && vimdiff ~/.$@ ~/.$@~ && rm ~/.$@~ 
+	./install-file.sh $@
 
 git :
 	git config --global user.name "Raigo Aljand"
