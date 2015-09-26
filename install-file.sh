@@ -3,12 +3,20 @@
 set -e
 set -o pipefail
 
-if [[ $1 ]] && ! cmp "$1" "~/.$1"
+if [[ $1 ]]
 then
-	cp -b $1 ~/.$1
-	if [[ -e ~/.$1~ ]]
+	target="~/.$1"
+	if [[ -d $1 ]]
 	then
-		vimdiff ~/.$1 ~/.$1~ && rm ~/.$1~ 
+		mkdir -p "$target"
+	elif [[ -f $1 ]] && ! cmp -s "$1" "$target"
+	then
+		md5sum "$1" > "$1.md5"
+		cp -b "$1" "$target"
+		if [[ -e $target~ ]]
+		then
+			vimdiff "$target" "$target~" && rm "$target~" 
+		fi
 	fi
 else
 	echo Usage: $0 file-to-install

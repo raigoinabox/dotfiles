@@ -1,6 +1,4 @@
-# use rsync for vim directory instead of normal cp -rb.
-# we need to exclude the directories where i have the undo files and the backup/lock files and cp doesn't have exclude option.
-# Though that's easily fixed with when I copy them as templates. Then the templates won't have the backup or undo files.
+# Solution is :: find vim -exec install-directory or file or something {} \;
 
 pwd := $(shell pwd)
 files := bashrc ackrc my.cnf profile zshrc zshenv tmux.conf
