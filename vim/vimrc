@@ -138,5 +138,5 @@ endif
 
 augroup tagsgroup
 	au!
-	au FileWritePost *.{c,h} !ctags -R &
+	au FileWritePost *.{c,h,sql} !ctags -R --fields=+l &
 augroup END
