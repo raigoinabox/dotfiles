@@ -1,7 +1,7 @@
 # Solution is :: find vim -exec install-directory or file or something {} \;
 
 pwd := $(shell pwd)
-files := bashrc ackrc my.cnf profile zshrc zshenv tmux.conf
+files := bashrc ackrc my.cnf profile zshrc zshenv tmux.conf vim
 
 install : git $(files)
 	sudo pacman -S --needed autojump source-highlight vim-taglist
@@ -9,7 +9,7 @@ install : git $(files)
 .PHONY: install git $(files)
 
 $(files) :
-	./install-file.sh $@
+	find $@ -exec ./install-file.sh {} \;
 
 git :
 	git config --global user.name "Raigo Aljand"

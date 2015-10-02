@@ -5,14 +5,14 @@ set -o pipefail
 
 if [[ $1 ]]
 then
-	target="~/.$1"
+	target=~/."$1"
 	if [[ -d $1 ]]
 	then
 		mkdir -p "$target"
 	elif [[ -f $1 ]] && ! cmp -s "$1" "$target"
 	then
-		md5sum "$1" > "$1.md5"
 		cp -b "$1" "$target"
+		md5sum "$target" > "$1.md5"
 		if [[ -e $target~ ]]
 		then
 			vimdiff "$target" "$target~" && rm "$target~" 
