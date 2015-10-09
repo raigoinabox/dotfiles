@@ -14,3 +14,5 @@ setopt HIST_IGNORE_DUPS
 bindkey -e
 
 source /usr/share/autojump/autojump.zsh
+
+alias mpv="optirun mpv"
