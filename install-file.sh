@@ -19,5 +19,6 @@ then
 		fi
 	fi
 else
-	echo Usage: $0 file-to-install
+	echo Usage: $0 file-to-install >&2
+	exit 1
 fi
