@@ -17,3 +17,4 @@ source /usr/share/autojump/autojump.zsh
 
 alias mpv="optirun mpv"
 alias mv="mv -i"
+alias livestreamer="livestreamer -p \"optirun mpv\""

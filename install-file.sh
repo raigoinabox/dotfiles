@@ -12,7 +12,7 @@ then
 	elif [[ -f $1 ]] && ! cmp -s "$1" "$target"
 	then
 		cp -b "$1" "$target"
-		md5sum "$target" > "$1.md5"
+		# md5sum "$target" > "$1.md5"
 		if [[ -e $target~ ]]
 		then
 			vimdiff "$target" "$target~" && rm "$target~" 

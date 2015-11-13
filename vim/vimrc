@@ -104,7 +104,7 @@ if has('langmap') && exists('+langnoremap')
 endif
 
 " Raigo options
-let mapleader = "\<Space>"
+let mapleader = ","
 
 let g:haddock_browser = "/usr/bin/firefox"
 let g:syntastic_mode_map = { "mode": "active", "active_filetypes": [], "passive_filetypes": ["python"] }
