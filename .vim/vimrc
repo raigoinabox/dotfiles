@@ -141,3 +141,7 @@ augroup tagsgroup
 	au!
 	au FileWritePost *.{c,h,sql} !ctags -R --fields=+l &
 augroup END
+
+" Instructions from vim-latexsuite
+set grepprg=grep\ -nH\ $*
+let g:tex_flavor = "latex"
