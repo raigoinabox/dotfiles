@@ -1,7 +1,7 @@
 pwd := $(shell pwd)
 
 install : git
-	sudo pacman -S --needed autojump source-highlight vim-taglist
+	sudo pacman -S --needed autojump vim-taglist
 
 .PHONY: install git
 
