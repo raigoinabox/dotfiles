@@ -18,6 +18,6 @@ source /usr/share/autojump/autojump.zsh
 alias mpv="optirun mpv"
 alias mv="mv -i"
 alias livestreamer='livestreamer -p "optirun mpv" $(xclip -selection clipboard -o)'
-alias pager='eval $(fc -ln -1) | less'
+alias pager='fc -e - | less'
 
 rem
