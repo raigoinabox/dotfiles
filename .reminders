@@ -1,3 +1,6 @@
-REM November 8 Sun MSG Isadepäev
+REM 2015 December 17 +1 AT 11:00 MSG %b Kell 11 Opmanniga kohtumine.
+REM November 8 Sun +1 MSG %b Isadepäev
+
 REM Sat MSG Maarja
-REM Fri MSG Kool hakkab 08:00, mitte 08:30
+REM 1 -1 MSG %b Veenäidud
+REM Sun MSG Ei õpi täna
