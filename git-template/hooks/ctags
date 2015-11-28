@@ -1,7 +1,8 @@
 #!/bin/sh
 
-set -eu
+set -euo pipefail
 
-cd "$(git rev-parse --show-toplevel)"
+toplevel="$(git rev-parse --show-toplevel)"
+cd "$toplevel"
 
 ctags -R
