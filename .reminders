@@ -1,6 +1,7 @@
 REM 2015 December 17 +1 AT 11:00 MSG %b Kell 11 Opmanniga kohtumine.
-REM November 8 Sun +1 MSG %b Isadepäev
+REM November 8 Sun MSG %b Isadepäev
+REM December 11 +1 MSG %b Isa sünnipäev
 
 REM Sat MSG Maarja
 REM 1 -1 MSG %b Veenäidud
-REM Sun MSG Ei õpi täna
+REM 2020 MSG Puugivaktsiini süst

@@ -13,11 +13,12 @@ compinit
 setopt HIST_IGNORE_DUPS
 bindkey -e
 
+eval $(thefuck --alias)
 source /usr/share/autojump/autojump.zsh
 
 alias mpv="optirun mpv"
 alias mv="mv -i"
-alias livestreamer='livestreamer -p "optirun mpv" $(xclip -selection clipboard -o)'
-alias pager='fc -e - | less'
+alias page='fc -e - | less'
+alias livestreamer="livestreamer.sh"
 
 rem

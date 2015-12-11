@@ -137,7 +137,7 @@ endif
 
 augroup tagsgroup
 	au!
-	au FileWritePost *.{c,h,sql} !ctags -R --fields=+l &
+	au BufWritePost *.{c,h,sql} !ctags -R --fields=+l &
 augroup END
 
 " Instructions from vim-latexsuite
