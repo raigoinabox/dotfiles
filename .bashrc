@@ -11,12 +11,15 @@ PS1='[\u@\h \W]\$ '
 # Raigo
 alias grep='grep --color=auto'
 eval $(dircolors -b)
-alias server_eclipse="env LANG=C LC_ALL=C eclipse"
 alias watch="watch -d"
 alias diff="diff -u"
+alias mpv="optirun mpv"
+alias mv="mv -i"
+alias page='fc -e - | less'
+alias livestreamer="livestreamer.sh"
 
-source /usr/share/autojump/autojump.bash
-color()(set -o pipefail;"$@" 2>&1>&3|sed $'s,.*,\e[31m&\e[m,'>&2)3>&1
+# source /usr/share/autojump/autojump.bash
+# color()(set -o pipefail;"$@" 2>&1>&3|sed $'s,.*,\e[31m&\e[m,'>&2)3>&1
 
 reset=$(tput sgr0)
 red=$(tput setaf 1)
@@ -25,3 +28,5 @@ green=$(tput setaf 2)
 PS1="\[$red\]$PS1\[$reset\]"
 
 shopt -s checkwinsize
+
+rem
