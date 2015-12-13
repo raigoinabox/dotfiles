@@ -98,7 +98,6 @@ endif
 " Raigo
 let mapleader = ","
 
-let g:haddock_browser = "/usr/bin/firefox"
 let g:syntastic_mode_map = { "mode": "active", "active_filetypes": [], "passive_filetypes": ["python"] }
 let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_confirm_extra_conf = 0
@@ -122,12 +121,12 @@ nmap <Leader>x :!./%<CR>
 vmap <Leader>y "+y
 vmap <Leader>d "+d
 
-if &diff
-       colo peaksea
-endif
-
-augroup tagsgroup
-       au!
-       au BufWritePost *.{c,h,sql} !ctags -R --fields=+l &
-augroup END
+" if &diff
+"        colo peaksea
+" endif
+" 
+" augroup tagsgroup
+"        au!
+"        au BufWritePost *.{c,h,sql} !ctags -R --fields=+l &
+" augroup END
 
