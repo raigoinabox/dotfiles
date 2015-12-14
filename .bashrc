@@ -103,13 +103,10 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 # Raigo
-alias grep='grep --color=auto'
-eval $(dircolors -b)
+. /usr/share/autojump/autojump.bash
+#color()(set -o pipefail;"$@" 2>&1>&3|sed $'s,.*,\e[31m&\e[m,'>&2)3>&1
+
 alias server_eclipse="env LANG=C LC_ALL=C eclipse"
 alias watch="watch -d"
 alias diff="diff -u"
 alias page='fc -e - | less'
-
-source /usr/share/autojump/autojump.bash
-color()(set -o pipefail;"$@" 2>&1>&3|sed $'s,.*,\e[31m&\e[m,'>&2)3>&1
-
