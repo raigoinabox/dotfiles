@@ -3,5 +3,5 @@ alias diff="diff -u"
 alias mpv="optirun mpv"
 alias mv="mv -i"
 alias page='fc -e - | less'
-# alias livestreamer="livestreamer.sh"
+alias livestreamer="livestreamer.sh"
 alias less="less -i"
