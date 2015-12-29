@@ -96,12 +96,33 @@ if !exists(":DiffOrig")
 endif
 
 " Raigo
-let mapleader = ","
+execute pathogen#infect()
 
+" Syntastic
+" Recommended
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" From me
 let g:syntastic_mode_map = { "mode": "active", "active_filetypes": [], "passive_filetypes": ["python"] }
+
+" Youcompleteme
 let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_confirm_extra_conf = 0
 
+" Easytags
+let g:easytags_resolve_links = 1
+
+" Mine
+let mapleader = ","
+
+set undofile
 set autowrite
 set showbreak=>\ 
 set ignorecase
@@ -110,6 +131,7 @@ set backupdir=./.backupdir,~/.vim/backupdir,.,/tmp
 set undodir=./.undodir,~/.vim/undodir,.,/tmp
 set exrc
 set secure
+set number
 
 map <Leader>p "+p
 map <Leader>P "+P
@@ -117,16 +139,11 @@ map <Leader>P "+P
 nmap <Leader>c :make compile<CR>
 nmap <Leader>r :make! run<CR>
 nmap <Leader>x :!./%<CR>
+nmap <Leader>w :w<CR>
 
 vmap <Leader>y "+y
 vmap <Leader>d "+d
 
-" if &diff
-"        colo peaksea
-" endif
-" 
-" augroup tagsgroup
-"        au!
-"        au BufWritePost *.{c,h,sql} !ctags -R --fields=+l &
-" augroup END
-
+if &diff
+       colo peaksea
+endif

@@ -115,6 +115,16 @@ fi
 
 # Raigo
 . /usr/share/autojump/autojump.sh
-# color()(set -o pipefail;"$@" 2>&1>&3|sed $'s,.*,\e[31m&\e[m,'>&2)3>&1
+
+PROMPT_COMMAND=_prompt_command
+
+function _prompt_command {
+	local EXIT_CODE="$?"
+	echo
+	if [[ ! "$EXIT_CODE" == "0" ]]
+	then
+		echo -n "$EXIT_CODE "
+	fi
+}
 
 rem

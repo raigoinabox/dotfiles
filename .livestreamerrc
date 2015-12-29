@@ -1,1 +1,2 @@
-player=optirun vlc
+player=optirun mpv --cache=8192
+hls-segment-threads=2

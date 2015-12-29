@@ -1,7 +1,14 @@
-REM 2015 December 17 +1 AT 11:00 MSG %b Kell 11 Opmanniga kohtumine.
-REM November 8 Sun MSG %b Isadepäev
-REM December 11 +1 MSG %b Isa sünnipäev
+REM ONCE 2016 January 2 +1 AT 09:00 MSG %B %3 Rekursiooni- ja keerukusteooria konsultatsioon
+REM ONCE 2016 January 4 +1 MSG %B Kell 12 Opmanniga kohtumine.
+REM ONCE 2016 January 5 +1 MSG %B Rekursiooni- ja keerukusteooria eksam
+REM ONCE 2016 January 12 +1 MSG %B Füüsika II eksam
+REM ONCE 2016 January 19 +1 MSG %B Ettevõtlus ja äri planeerimine eksam
+REM ONCE 2019 April +180 MSG %B Ubuntu 14.04 End of life.
+REM ONCE 2020 MSG Puugivaktsiini süst
 
-REM Sat MSG Maarja
-REM 1 -1 MSG %b Veenäidud
-REM 2020 MSG Puugivaktsiini süst
+REM ONCE November 8 Sun MSG %B Isadepäev
+REM ONCE December 11 +1 MSG %B Isa sünnipäev
+
+REM ONCE Sat MSG Maarja - Person of Interest
+REM ONCE 1 -1 MSG %B Veenäidud
+REM ONCE Mon RUN task

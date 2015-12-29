@@ -1,7 +1,9 @@
 alias watch="watch -d"
 alias diff="diff -u"
-alias mpv="optirun mpv"
 alias mv="mv -i"
-alias page='fc -e - | less'
-alias livestreamer="livestreamer.sh"
 alias less="less -i"
+alias rem='rem -w,1 -m'
+alias mpv='optirun mpv'
+
+alias livestreamer="livestreamer.sh"
+alias scan='nmap -sn "$(hostname -I)"/24'
