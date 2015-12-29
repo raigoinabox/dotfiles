@@ -143,8 +143,3 @@ vmap <Leader>d "+d
 if &diff
 	colo peaksea
 endif
-
-augroup tagsgroup
-	au!
-	au FileWritePost *.{c,h,sql} !ctags -R --fields=+l &
-augroup END
