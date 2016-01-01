@@ -11,4 +11,4 @@ REM ONCE December 11 +1 MSG %B Isa sünnipäev
 
 REM ONCE Sat MSG Maarja - Person of Interest
 REM ONCE 1 -1 MSG %B Veenäidud
-REM ONCE Mon RUN task
+REM ONCE SKIP OMIT Sun RUN task
