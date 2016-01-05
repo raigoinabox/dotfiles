@@ -126,5 +126,3 @@ function _prompt_command {
 		echo -n "$EXIT_CODE "
 	fi
 }
-
-rem
