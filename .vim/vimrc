@@ -111,13 +111,29 @@ if has('langmap') && exists('+langnoremap')
   set langnoremap
 endif
 
-" Raigo options
+" Raigo
+execute pathogen#infect()
+
+" Syntastic
+" Recommended
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 let mapleader = ","
 
 let g:haddock_browser = "/usr/bin/firefox"
 let g:syntastic_mode_map = { "mode": "active", "active_filetypes": [], "passive_filetypes": ["python"] }
 let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_confirm_extra_conf = 0
+
+" Easytags
+let g:easytags_resolve_links = 1
 
 set autowrite
 set breakindent
@@ -136,6 +152,7 @@ map <Leader>P "+P
 nmap <Leader>c :make compile<CR>
 nmap <Leader>r :make! run<CR>
 nmap <Leader>x :!./%<CR>
+nmap <Leader>w :w<CR>
 
 vmap <Leader>y "+y
 vmap <Leader>d "+d
