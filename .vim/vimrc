@@ -145,5 +145,5 @@ vmap <Leader>y "+y
 vmap <Leader>d "+d
 
 if &diff
-       colo peaksea
+	colo peaksea
 endif
