@@ -74,6 +74,7 @@ esac
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
+	# shellcheck disable=SC2015
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
     #alias dir='dir --color=auto'
@@ -115,14 +116,3 @@ fi
 
 # Raigo
 . /usr/share/autojump/autojump.sh
-
-PROMPT_COMMAND=_prompt_command
-
-function _prompt_command {
-	local EXIT_CODE="$?"
-	echo
-	if [[ ! "$EXIT_CODE" == "0" ]]
-	then
-		echo -n "$EXIT_CODE "
-	fi
-}
