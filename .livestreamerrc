@@ -1,1 +1,1 @@
-player=optirun mpv
+player=optirun mpv --cache=1024
