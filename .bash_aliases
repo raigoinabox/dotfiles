@@ -6,5 +6,4 @@ alias rem='rem -w,1 -m'
 alias mpv='optirun mpv'
 alias nethogs='sudo nethogs wlan0'
 
-alias livestreamer="livestreamer.sh"
 alias scan='nmap -sn "$(hostname -I)"/24'
