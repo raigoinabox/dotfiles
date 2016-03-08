@@ -146,6 +146,7 @@ nmap <Leader>r :make! run<CR>
 nmap <Leader>x :!./%<CR>
 nmap <Leader>w :w<CR>
 nmap <silent> <leader>s :set spell!<CR>
+nnoremap <silent> <F8> :TlistToggle<CR>
 
 vmap <Leader>y "+y
 vmap <Leader>d "+d
