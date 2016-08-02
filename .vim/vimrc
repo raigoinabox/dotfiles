@@ -144,7 +144,7 @@ map <Leader>P "+P
 nmap <Leader>c :make compile<CR>
 nmap <Leader>r :make! run<CR>
 nmap <Leader>x :!./%<CR>
-nmap <Leader>w :w<CR>
+nmap <Leader>w :update<CR>
 nmap <silent> <leader>s :set spell!<CR>
 nnoremap <silent> <F8> :TlistToggle<CR>
 
