@@ -142,9 +142,8 @@ set secure
 map <Leader>p "+p
 map <Leader>P "+P
 
-nmap <Leader>c :make compile<CR>
+nmap <Leader>m :make all<CR>
 nmap <Leader>r :make! run<CR>
-nmap <Leader>x :!./%<CR>
 nmap <Leader>w :update<CR>
 
 vmap <Leader>y "+y
