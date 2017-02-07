@@ -100,24 +100,39 @@ execute pathogen#infect()
 
 " Syntastic
 " Recommended
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-" Youcompleteme
-let g:ycm_collect_identifiers_from_tags_files = 1
-let g:ycm_confirm_extra_conf = 0
-
 " Easytags
 let g:easytags_resolve_links = 1
+let g:easytags_dynamic_files = 1
 
 " Tagbar
 nmap <F8> :TagbarToggle<CR>
+
+" The Silver Searcher
+if executable('ag')
+	" Use ag over grep
+	set grepprg=ag\ --nogroup\ --nocolor
+	" Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+	let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+	" ag is fast enough that CtrlP doesn't need to cache
+	let g:ctrlp_use_caching = 0
+	" bind g to grep word under cursor
+	nnoremap <Leader>f :grep -w "<C-R><C-W>"<CR>
+endif
+
+" neocomplete
+if !exists('g:neocomplete#sources#omni#input_patterns')
+  let g:neocomplete#sources#omni#input_patterns = {}
+endif
+let g:neocomplete#sources#omni#input_patterns.php =
+\ '[^. \t]->\%(\h\w*\)\?\|\h\w*::\%(\h\w*\)\?'
+let g:neocomplete#sources#omni#input_patterns.c =
+\ '[^.[:digit:] *\t]\%(\.\|->\)\%(\h\w*\)\?'
+let g:neocomplete#enable_at_startup = 1
 
 " Mine
 set undofile
@@ -136,19 +151,5 @@ if executable("par")
 	set formatprg=par
 endif
 
-map <Leader>p "+p
-map <Leader>P "+P
-
-nmap <Leader>c :make compile<CR>
-nmap <Leader>r :make! run<CR>
-nmap <Leader>x :!./%<CR>
-nmap <Leader>w :update<CR>
-nmap <silent> <leader>s :set spell!<CR>
-nnoremap <silent> <F8> :TlistToggle<CR>
-
-vmap <Leader>y "+y
-vmap <Leader>d "+d
-
-if &diff
-	colo peaksea
-endif
+nnoremap <Leader>m :make<CR>
+nnoremap <Leader>t :make! run_test<CR>

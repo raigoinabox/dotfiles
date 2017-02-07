@@ -116,3 +116,4 @@ fi
 
 # Raigo
 . /usr/share/autojump/autojump.sh
+export BROWSER=firefox
