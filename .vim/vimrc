@@ -119,6 +119,10 @@ let g:ycm_semantic_triggers = {'html' : ['<']}
 " Easytags
 let g:easytags_resolve_links = 1
 
+" Autoformat
+let g:formatdef_sqlformat = '"sqlformat -"'
+let g:formatters_sql = ['sqlformat']
+
 " Raigo
 set autowrite
 set breakindent
