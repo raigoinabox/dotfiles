@@ -153,3 +153,5 @@ endif
 
 nnoremap <Leader>m :make<CR>
 nnoremap <Leader>t :make! run_test<CR>
+
+let g:sh_fold_enabled= 1
